@@ -43,5 +43,7 @@ if (settings) {
     window.gtm_settings.sgtm_domain = settings.sgtm_domain;
 
     var infodiv = document.querySelector('#gtm_settings_disply');
-    infodiv.innerHTML = `<li>GTM-ID: ${window.gtm_settings.gtm_id}</li><li>sGTM Domain: ${window.gtm_settings.sgtm_domain}</li>`;
+    infodiv.innerHTML = `<li>GTM-ID: ${window.gtm_settings.gtm_id}</li><li>sGTM Domain: ${window.gtm_settings.sgtm_domain}</li><li>CMP: ${
+        window.gtm_settings.cmp !== ''
+    }</li>`;
 }

@@ -5,6 +5,13 @@ if (settings) {
     window.gtm_settings.cmp = settings.cmp;
     window.gtm_settings.sgtm_domain = settings.sgtm_domain;
 
+    //load cookiebanner
+    if (typeof settings.cmp !== 'undefined' && settings.cmp !== '') {
+        var cookiefirst = document.createElement('script');
+        cookiefirst.src = 'https://consent.cookiefirst.com/sites/gtmplayground.webrocket.com-' + settings.cmp + '/consent.js';
+        document.head.appendChild(cookiefirst);
+    }
+
     var gtm_source = 'www.googletagmanager.com';
     if (typeof settings.sgtm_domain !== 'undefined' && settings.sgtm_domain !== '') {
         gtm_source = settings.sgtm_domain;
