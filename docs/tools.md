@@ -20,4 +20,12 @@ When the Chrome extension is present, it enables additional features for Tag Ass
 
 [Add Tag Assistant Companion to Chrome](https://chromewebstore.google.com/detail/tag-assistant-companion/jmekfmbnaedfebfnmakmokmlfpblbfdm){: target="_blank" .btn .btn-green }
 
+# GTM Copy Paste
+
+Copy your Tags, Triggers and Variables and Paste them into any other account
+
+Easily Copy and Paste your Tags, Triggers, and Variables from one Google Tag Manager account to the next. Simply add them to the extension and then paste them into your intended account. Your items will be uploaded through the GTM API.
+
+[Add Tag Assistant Companion to Chrome](https://chromewebstore.google.com/detail/gtm-copy-paste/mhhidgiahbopjapanmbflpkcecpciffa){: target="_blank" .btn .btn-green }
+
 <script src="{{ site.baseurl }}{% link assets/js/load_gtm.js %}"> </script>
