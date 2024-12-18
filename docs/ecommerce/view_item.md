@@ -1,11 +1,11 @@
 ---
-title: Productview
+title: view_item
 layout: default
 parent: Ecommerce Tracking
 nav_order: 3
 ---
 
-# Productview
+# view_item
 
 When you click on the 'push view_item' button the follwoing information gets pushed into the datalayer:
 
