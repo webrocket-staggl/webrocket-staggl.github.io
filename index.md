@@ -11,6 +11,8 @@ This page is a GTM integration playground.
 <form>
   <label for="gtm_id">GTM:</label><br>
   <input type="text" id="gtm_id" name="gtm_id" value="GTM-000000"><br>
+  <label for="sgtm_domain">SGTM Firstparty domain:</label><br>
+  <input type="text" id="sgtm_domain" name="sgtm_domain"><br>
   <label for="cmp">Cookiefirst API key</label><br>
   <input type="text" id="cmp" name="cmp"><br><br>
   <input type="submit" value="Save">

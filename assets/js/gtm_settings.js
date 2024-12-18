@@ -11,21 +11,25 @@ form.addEventListener('submit', function (event) {
     // Get the values from the form inputs
     const gtmId = document.getElementById('gtm_id').value;
     const cmpAPIKey = document.getElementById('cmp').value;
+    const sgtm = document.getElementById('sgtm_domain').value;
 
     // Save the values to localStorage
     var storeage = JSON.stringify({
         gtm_id: gtmId,
-        cmp: cmpAPIKey
+        cmp: cmpAPIKey,
+        sgtm_domain: sgtm
     });
     localStorage.setItem('gtm_settings', storeage);
 
     // Update the window.gtm_settings object
     window.gtm_settings.gtm_id = gtmId;
     window.gtm_settings.cmp = cmpAPIKey;
+    window.gtm_settings.sgtm_domain = sgtm;
 
     console.log('Form values saved:');
     console.log('gtm_id:', gtmId);
     console.log('cmp:', cmpAPIKey);
+    console.log('sgtm_domain:', sgtm);
 
     // Optionally, you can submit the form after saving
     location.reload();
@@ -36,7 +40,8 @@ var settings = localStorage.getItem('gtm_settings') !== null ? JSON.parse(localS
 if (settings) {
     window.gtm_settings.gtm_id = settings.gtm_id;
     window.gtm_settings.cmp = settings.cmp;
+    window.gtm_settings.sgtm_domain = settings.sgtm_domain;
 
     var infodiv = document.querySelector('#gtm_settings_disply');
-    infodiv.innerHTML = `<li>GTM-ID: ${window.gtm_settings.gtm_id}</li>`;
+    infodiv.innerHTML = `<li>GTM-ID: ${window.gtm_settings.gtm_id}</li><li>sGTM Domain: ${window.gtm_settings.sgtm_domain}</li>`;
 }
