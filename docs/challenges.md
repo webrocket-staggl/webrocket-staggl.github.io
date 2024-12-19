@@ -42,9 +42,29 @@ Add the provided CMP API key to the configuration
   
 ### Part 2: SGTM
 
-- Connect a server_url TBD
+- Scenario: Send a pageview event from the browser to the server container, then forward it to Google Analytics 4.
+- Activity:
+  - Set up a client in the server container to handle pageview events.
+  - Configure a tag to forward the event to GA4.
+  - Test using GTM preview mode or tools like Postman to simulate events.
 
+## Pro:
 
+## Part 1: Modifying Data in Transit
+- Scenario: Modify or enrich user data before sending it to the destination platform.
+- Activity:
+  - Use the server container to strip Personally Identifiable Information (PII) from the event.
+  - Add a custom parameter (e.g., user_type = "premium") before forwarding to Google Ads.
+  - Test the modified data using the server container's debug console.
+
+## Part 2: Configure Additional Tools
+- Configure a server container to handle multiple event types (pageviews, purchases) and forward them to two destinations (e.g., GA4 and Facebook Ads).
+
+## Optional: Handling Ad Blockers
+- Scenario: Work around ad blockers by using the server-side container to relay ad tracking events.
+- Activity:
+  - Configure a custom subdomain for the server container (e.g., ads.mysite.com).
+  - Test how the server container bypasses ad blockers to ensure ads are tracked properly.
 
 <script src="{{ site.baseurl }}{% link assets/js/load_gtm.js %}"> </script>
 <script src="{{ site.baseurl }}{% link assets/js/datalayer.js %}"> </script>
